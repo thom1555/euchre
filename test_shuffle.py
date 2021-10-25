@@ -7,24 +7,65 @@ class TestSuffle(unittest.TestCase):
 
     def test_deck_size(self):
         s = Shuffle()
-
-        # Should start with empty list
-        deck = s.getDeck()
+        deck = s.getDeck()  # Should start with empty list
         self.assertEqual(len(deck), 0)
 
-        # Should populate 24 cards
-        s.createDeck()
+        s.createDeck() # Should populate 24 cards
         deck = s.getDeck()
         self.assertEqual(len(deck), 24)
 
-    def test_exists(self):
-        # Init deck
+
+    def test_exists_jack_hearts(self):
         s = Shuffle()
         s.createDeck()
         deck = s.getDeck()
-
-        # Create cards
         jackH = Card('jack', 'hearts')
+
+        contains = False
+        for c in deck:
+            if c.toString() == jackH.toString():
+                contains = True
+                break
+        self.assertTrue(contains)
+
+
+    def test_exists_2(self):
+        s = Shuffle()
+        s.createDeck()
+        deck = s.getDeck()
         tenS = Card('10', 'spades')
+
+        contains = False
+        for c in deck:
+            if c.toString() == tenS.toString():
+                contains = True
+                break
+        self.assertTrue(contains)
+
+
+    def test_exists_3(self):
+        s = Shuffle()
+        s.createDeck()
+        deck = s.getDeck()
         kingD = Card('king', 'diamonds')
+
+        contains = False
+        for c in deck:
+            if c.toString() == kingD.toString():
+                contains = True
+                break
+        self.assertTrue(contains)
+
+
+    def test_exists_4(self):
+        s = Shuffle()
+        s.createDeck()
+        deck = s.getDeck()
         queenC = Card('queen', 'clubs')
+
+        contains = False
+        for c in deck:
+            if c.toString() == queenC.toString():
+                contains = True
+                break
+        self.assertTrue(contains)

@@ -14,6 +14,10 @@ class Card:
         returnString = str(self.value) + " of " + str(self.suit)
         return returnString
 
+    def toString(self):
+        returnString = str(self.value) + " of " + str(self.suit)
+        return returnString
+
     def getValue(self):
         return self.values[self.value]
 
