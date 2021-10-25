@@ -24,3 +24,12 @@ class Player:
     def displayCards(self):
         for card in cards:
             print(card)
+
+def main():
+    p = Player('Johhny')
+    p2 = Player('James')
+    print(p.getName())
+    print(p2.getName())
+
+if __name__ == __main__():
+    main()
