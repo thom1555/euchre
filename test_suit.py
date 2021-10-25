@@ -19,24 +19,24 @@ class TestSuit(unittest.TestCase):
     def test_suit_change(self):
         # Hearts to diamonds
         h = Suit('hearts')
-        self.assertEqual(h.getName(), 'hearts')
+        self.assertEqual(h.toString(), 'hearts')
         h.becomeTrump()
-        self.assertEqual(h.getName(), 'diamonds')
+        self.assertEqual(h.toString(), 'diamonds')
 
         # Diamonds to hearts
         d = Suit('diamonds')
-        self.assertEqual(d.getName(), 'diamonds')
+        self.assertEqual(d.toString(), 'diamonds')
         d.becomeTrump()
-        self.assertEqual(d.getName(), 'hearts')
+        self.assertEqual(d.toString(), 'hearts')
 
         # Spades to clubs
         s = Suit('spades')
-        self.assertEqual(s.getName(), 'spades')
+        self.assertEqual(s.toString(), 'spades')
         s.becomeTrump()
-        self.assertEqual(s.getName(), 'clubs')
+        self.assertEqual(s.toString(), 'clubs')
 
         # Clubs to Spades
         c = Suit('clubs')
-        self.assertEqual(c.getName(), 'clubs')
+        self.assertEqual(c.toString(), 'clubs')
         c.becomeTrump()
-        self.assertEqual(c.getName(), 'spades')
+        self.assertEqual(c.toString(), 'spades')

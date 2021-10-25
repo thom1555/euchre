@@ -12,9 +12,12 @@ class Suit:
             self.name = "INVALID"
 
     def __str__(self):
-        return self.name
+        return self.toString()
 
-    def getName(self):
+    def __repr__(self):
+        return self.toString()
+
+    def toString(self):
         return self.name
 
     def getColor(self):
