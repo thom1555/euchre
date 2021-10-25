@@ -22,14 +22,22 @@ class Player:
         self.cards = cards
 
     def displayCards(self):
-        for card in cards:
+        for card in self.cards:
             print(card)
+
 
 def main():
     p = Player('Johhny')
-    p2 = Player('James')
-    print(p.getName())
-    print(p2.getName())
+    pCards = []
+    pCards.append(Card('jack', 'hearts'))
+    pCards.append(Card('jack', 'diamonds'))
+    pCards.append(Card('ace', 'hearts'))
+    pCards.append(Card('king', 'hearts'))
+    pCards.append(Card('queen', 'hearts'))
+    p.setCards(pCards)
 
-if __name__ == __main__():
+    print(p.getName())
+    p.displayCards()
+
+if __name__ == "__main__":
     main()
