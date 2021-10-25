@@ -35,6 +35,7 @@ class Suit:
         else:
             self.name = self.black[self.black.index(self.name) - 1]
 
+
 def main():
     s = Suit('hearts')
     print(s)
