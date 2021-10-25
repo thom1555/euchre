@@ -11,8 +11,10 @@ class Card:
         self.value = value
 
     def __str__(self):
-        returnString = str(self.value) + " of " + str(self.suit)
-        return returnString
+        return self.toString()
+
+    def __repr__(self):
+        return self.toString()
 
     def toString(self):
         returnString = str(self.value) + " of " + str(self.suit)
@@ -25,7 +27,7 @@ class Card:
         return self.suit.getColor()
 
     def getSuit(self):
-        return self.suit.getName()
+        return self.suit.toString()
 
     def setLeft(self):
         self.value = 'left'

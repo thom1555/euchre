@@ -7,17 +7,12 @@ class TestSuffle(unittest.TestCase):
 
     def test_deck_size(self):
         s = Shuffle()
-        deck = s.getDeck()  # Should start with empty list
-        self.assertEqual(len(deck), 0)
-
-        s.createDeck() # Should populate 24 cards
-        deck = s.getDeck()
+        deck = s.getDeck()  # Should populate 24 cards
         self.assertEqual(len(deck), 24)
-
+        
 
     def test_exists_jack_hearts(self):
         s = Shuffle()
-        s.createDeck()
         deck = s.getDeck()
         jackH = Card('jack', 'hearts')
 
@@ -31,7 +26,6 @@ class TestSuffle(unittest.TestCase):
 
     def test_exists_2(self):
         s = Shuffle()
-        s.createDeck()
         deck = s.getDeck()
         tenS = Card('10', 'spades')
 
@@ -45,7 +39,6 @@ class TestSuffle(unittest.TestCase):
 
     def test_exists_3(self):
         s = Shuffle()
-        s.createDeck()
         deck = s.getDeck()
         kingD = Card('king', 'diamonds')
 
@@ -59,7 +52,6 @@ class TestSuffle(unittest.TestCase):
 
     def test_exists_4(self):
         s = Shuffle()
-        s.createDeck()
         deck = s.getDeck()
         queenC = Card('queen', 'clubs')
 

@@ -7,6 +7,7 @@ class Shuffle:
     """
     def __init__(self):
         self.deck = []
+        self.createDeck()
 
     def createDeck(self):
         suits = ["hearts", "diamonds", "clubs", "spades"]
