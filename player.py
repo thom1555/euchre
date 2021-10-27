@@ -1,43 +1,42 @@
 from card import Card
 
+
 class Player:
     """
     Holds the information and cards of a player
     """
+
     def __init__(self, name):
         self.points = 0
         self.cards = []
         self.name = name
 
-    def getPoints(self):
+    def get_points(self):
         return self.points
 
-    def getCards(self):
+    def get_cards(self):
         return self.cards
 
-    def getName(self):
+    def get_name(self):
         return self.name
 
-    def setCards(self, cards):
+    def set_cards(self, cards):
         self.cards = cards
 
-    def displayCards(self):
+    def display_cards(self):
         for card in self.cards:
             print(card)
 
 
 def main():
     p = Player('Johhny')
-    pCards = []
-    pCards.append(Card('jack', 'hearts'))
-    pCards.append(Card('jack', 'diamonds'))
-    pCards.append(Card('ace', 'hearts'))
-    pCards.append(Card('king', 'hearts'))
-    pCards.append(Card('queen', 'hearts'))
-    p.setCards(pCards)
+    cards = [Card('jack', 'hearts'), Card('jack', 'diamonds'), Card('ace', 'hearts'), Card('king', 'hearts'),
+             Card('queen', 'hearts')]
+    p.set_cards(cards)
 
-    print(p.getName())
-    p.displayCards()
+    print(p.get_name())
+    p.display_cards()
+
 
 if __name__ == "__main__":
     main()

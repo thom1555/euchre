@@ -1,15 +1,17 @@
 from card import Card
 import random
 
+
 class Shuffle:
     """
     Shuffle cards and create deck
     """
+
     def __init__(self):
         self.deck = []
-        self.createDeck()
+        self.create_deck()
 
-    def createDeck(self):
+    def create_deck(self):
         suits = ["hearts", "diamonds", "clubs", "spades"]
         values = ["9", "10", "jack", "queen", "king", "ace"]
 
@@ -18,21 +20,22 @@ class Shuffle:
                 card = Card(value, suit)
                 self.deck.append(card)
 
-    def shuffleDeck(self):
+    def shuffle_deck(self):
         random.shuffle(self.deck)
 
-    def getDeck(self):
+    def get_deck(self):
         return self.deck
 
-    def printDeck(self):
+    def print_deck(self):
         for c in self.deck:
             print(c)
 
 
 def main():
     s = Shuffle()
-    s.createDeck()
-    s.printDeck()
+    s.create_deck()
+    s.print_deck()
+
 
 if __name__ == "__main__":
     main()

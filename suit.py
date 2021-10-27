@@ -17,10 +17,10 @@ class Suit:
     def __repr__(self):
         return self.toString()
 
-    def toString(self):
+    def to_string(self):
         return self.name
 
-    def getColor(self):
+    def get_color(self):
         if self.name in self.red:
             return 'red'
         elif self.name in self.black:
@@ -28,7 +28,7 @@ class Suit:
 
         return "INVALID"
 
-    def becomeTrump(self):
+    def become_trump(self):
         # Called on the left to correct info
         if self.name in self.red:
             self.name = self.red[self.red.index(self.name) - 1]
@@ -40,8 +40,9 @@ def main():
     s = Suit('hearts')
     print(s)
     print('After change')
-    s.becomeTrump()
+    s.become_trump()
     print(s)
+
 
 if __name__ == "__main__":
     main()

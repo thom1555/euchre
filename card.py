@@ -1,5 +1,6 @@
 from suit import Suit
 
+
 class Card:
     """
     Provide value information and other aspects of a card
@@ -16,31 +17,32 @@ class Card:
     def __repr__(self):
         return self.toString()
 
-    def toString(self):
-        returnString = str(self.value) + " of " + str(self.suit)
-        return returnString
+    def to_string(self):
+        ret_str = str(self.value) + " of " + str(self.suit)
+        return ret_str
 
-    def getValue(self):
+    def get_value(self):
         return self.values[self.value]
 
-    def getColor(self):
+    def get_color(self):
         return self.suit.getColor()
 
-    def getSuit(self):
+    def get_suit(self):
         return self.suit.toString()
 
-    def setLeft(self):
+    def set_left(self):
         self.value = 'left'
         self.suit.becomeTrump()
 
-    def setRight(self):
+    def set_right(self):
         self.value = 'right'
 
 
 def main():
-    myCard = Card('jack', 'hearts')
-    print(myCard.getValue())
-    print(myCard.getColor())
+    my_card = Card('jack', 'hearts')
+    print(my_card.getValue())
+    print(my_card.getColor())
+
 
 if __name__ == "__main__":
     main()
