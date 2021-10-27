@@ -7,12 +7,14 @@ class Player:
     """
 
     def __init__(self, name):
-        self.points = 0
+        self.tricks = 0
         self.cards = []
         self.name = name
+        self.called_trump = False
+        self.times_euchred = 0
 
-    def get_points(self):
-        return self.points
+    def get_tricks(self):
+        return self.tricks
 
     def get_cards(self):
         return self.cards
@@ -20,12 +22,27 @@ class Player:
     def get_name(self):
         return self.name
 
+    def get_times_euchred(self):
+        return self.times_euchred
+
+    def get_called_trump(self):
+        return self.called_trump
+
     def set_cards(self, cards):
         self.cards = cards
 
     def display_cards(self):
         for card in self.cards:
             print(card)
+
+    def add_trick(self):
+        self.tricks += 1
+
+    def add_euchre(self):
+        self.times_euchred += 1
+
+    def set_called_trump(self):
+        self.called_trump = True
 
 
 def main():

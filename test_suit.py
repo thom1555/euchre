@@ -33,11 +33,11 @@ class TestSuit(unittest.TestCase):
         # Spades to clubs
         s = Suit('spades')
         self.assertEqual(s.to_string(), 'spades')
-        s.becomeTrump()
-        self.assertEqual(s.toString(), 'clubs')
+        s.become_trump()
+        self.assertEqual(s.to_string(), 'clubs')
 
         # Clubs to Spades
         c = Suit('clubs')
-        self.assertEqual(c.toString(), 'clubs')
-        c.becomeTrump()
-        self.assertEqual(c.toString(), 'spades')
+        self.assertEqual(c.to_string(), 'clubs')
+        c.become_trump()
+        self.assertEqual(c.to_string(), 'spades')

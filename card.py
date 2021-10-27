@@ -12,10 +12,10 @@ class Card:
         self.value = value
 
     def __str__(self):
-        return self.toString()
+        return self.to_string()
 
     def __repr__(self):
-        return self.toString()
+        return self.to_string()
 
     def to_string(self):
         ret_str = str(self.value) + " of " + str(self.suit)
@@ -25,14 +25,14 @@ class Card:
         return self.values[self.value]
 
     def get_color(self):
-        return self.suit.getColor()
+        return self.suit.get_color()
 
     def get_suit(self):
-        return self.suit.toString()
+        return self.suit.to_string()
 
     def set_left(self):
         self.value = 'left'
-        self.suit.becomeTrump()
+        self.suit.become_trump()
 
     def set_right(self):
         self.value = 'right'
@@ -40,8 +40,8 @@ class Card:
 
 def main():
     my_card = Card('jack', 'hearts')
-    print(my_card.getValue())
-    print(my_card.getColor())
+    print(my_card.get_value())
+    print(my_card.get_color())
 
 
 if __name__ == "__main__":

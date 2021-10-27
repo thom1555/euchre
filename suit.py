@@ -12,10 +12,10 @@ class Suit:
             self.name = "INVALID"
 
     def __str__(self):
-        return self.toString()
+        return self.to_string()
 
     def __repr__(self):
-        return self.toString()
+        return self.to_string()
 
     def to_string(self):
         return self.name

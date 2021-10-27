@@ -8,7 +8,7 @@ class TestShuffle(unittest.TestCase):
 
     def test_deck_size(self):
         s = Shuffle()
-        deck = s.getDeck()  # Should populate 24 cards
+        deck = s.get_deck()  # Should populate 24 cards
         self.assertEqual(len(deck), 24)
 
     def test_exists_jack_hearts(self):
@@ -18,7 +18,7 @@ class TestShuffle(unittest.TestCase):
 
         contains = False
         for c in deck:
-            if c.toString() == jack_hearts.to_string():
+            if c.to_string() == jack_hearts.to_string():
                 contains = True
                 break
         self.assertTrue(contains)
