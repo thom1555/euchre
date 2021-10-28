@@ -37,6 +37,11 @@ class Card:
     def set_right(self):
         self.value = 'right'
 
+    def is_black_jack(self):
+        if self.value == 'jack' and self.suit.get_color() == 'black':
+            return True
+        return False
+
 
 def main():
     my_card = Card('jack', 'hearts')
