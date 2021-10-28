@@ -13,10 +13,7 @@ class Game:
         self.player_four = Player(name_four)
         self.team_one = Team(team_one, self.player_one, self.player_two)
         self.team_two = Team(team_two, self.player_three, self.player_four)
-
-    def start_game(self):
-        self.shuffle.shuffle_deck()
-        print(self.black_jack())
+        self.dealer = 0
 
     def black_jack(self):
         count = 0
@@ -24,6 +21,19 @@ class Game:
             if card.is_black_jack():
                 return count % 4
             count += 1
+
+    def deal(self):
+        self.shuffle.shuffle_deck()
+        deck = self.shuffle.get_deck()
+        self.player_one.set_cards(deck[0:5])
+        self.player_two.set_cards(deck[5:10])
+        self.player_three.set_cards(deck[10:15])
+        self.player_four.set_cards(deck[15:20])
+
+    def start_game(self):
+        self.shuffle.shuffle_deck()
+        self.dealer = self.black_jack()
+        self.deal()
 
 
 def main():

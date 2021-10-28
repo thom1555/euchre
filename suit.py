@@ -2,8 +2,8 @@ class Suit:
     """
     Provide information about suits and color
     """
-    red = ['hearts' , 'diamonds']
-    black = ['clubs' , 'spades']
+    red = ['hearts', 'diamonds']
+    black = ['clubs', 'spades']
 
     def __init__(self, name):
         if name in self.red or name in self.black:
