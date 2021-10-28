@@ -2,7 +2,7 @@ from player import Player
 
 
 class Team:
-    def __init__(self, name: str, player_one: Player, player_two: Player):
+    def __init__(self, name, player_one, player_two):
         self.team_name = name
         self.p_1 = player_one
         self.p_2 = player_two
@@ -25,7 +25,7 @@ class Team:
 def main():
     p1 = Player('Billy')
     p2 = Player('Timmy')
-    my_team = Team(p1, p2)
+    my_team = Team('Scrubs', p1, p2)
     my_team.display_team()
 
 

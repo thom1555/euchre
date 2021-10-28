@@ -1,5 +1,6 @@
 import unittest
 
+from card import Card
 from player import Player
 
 
@@ -32,3 +33,17 @@ class TestSuit(unittest.TestCase):
 
         p1.set_called_trump()
         self.assertTrue(p1.get_called_trump())
+
+    def test_reset(self):
+        p1 = Player("Jeremy")
+        p1.set_cards([Card('jack', 'hearts'), Card('jack', 'diamonds'), Card('ace', 'hearts'), Card('king', 'hearts'),
+                      Card('queen', 'hearts')])
+        p1.add_trick()
+        p1.set_called_trump()
+
+        p1.reset()
+        self.assertEqual(p1.get_cards(), [])
+        self.assertEqual(p1.get_called_trump(), False)
+        self.assertEqual(p1.get_tricks(), 0)
+
+

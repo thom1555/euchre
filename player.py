@@ -44,9 +44,14 @@ class Player:
     def set_called_trump(self):
         self.called_trump = True
 
+    def reset(self):
+        self.called_trump = False
+        self.cards = []
+        self.tricks = 0
+
 
 def main():
-    p = Player('Johhny')
+    p = Player('Rick')
     cards = [Card('jack', 'hearts'), Card('jack', 'diamonds'), Card('ace', 'hearts'), Card('king', 'hearts'),
              Card('queen', 'hearts')]
     p.set_cards(cards)

@@ -15,4 +15,21 @@ class Game:
         self.team_two = Team(team_two, self.player_three, self.player_four)
 
     def start_game(self):
-        pass
+        self.shuffle.shuffle_deck()
+        print(self.black_jack())
+
+    def black_jack(self):
+        count = 0
+        for card in self.shuffle.get_deck():
+            if card.is_black_jack():
+                return count % 4
+            count += 1
+
+
+def main():
+    new_game = Game('Puff', 'Snake', 'Voldie', 'Binx', 'Ballers', 'Scrubs')
+    new_game.start_game()
+
+
+if __name__ == "__main__":
+    main()
