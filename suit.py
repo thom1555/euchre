@@ -2,6 +2,10 @@ class Suit:
     """
     Provide information about suits and color
     """
+    hearts = 'hearts'
+    clubs = 'clubs'
+    diamonds = 'diamonds'
+    spades = 'spades'
     red = ['hearts', 'diamonds']
     black = ['clubs', 'spades']
 

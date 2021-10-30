@@ -1,5 +1,6 @@
 from player import Player
 from card import Card
+from suit import Suit
 from team import Team
 from shuffle import Shuffle
 
@@ -7,13 +8,12 @@ from shuffle import Shuffle
 class Game:
     def __init__(self, name_one, name_two, name_three, name_four, team_one, team_two):
         self.shuffle = Shuffle()
-        self.player_one = Player(name_one)
-        self.player_two = Player(name_two)
-        self.player_three = Player(name_three)
-        self.player_four = Player(name_four)
-        self.team_one = Team(team_one, self.player_one, self.player_two)
-        self.team_two = Team(team_two, self.player_three, self.player_four)
+        self.players = [Player(name_one), Player(name_two), Player(name_three), Player(name_four)]
+        self.team_one = Team(team_one, self.players[0], self.players[2])
+        self.team_two = Team(team_two, self.players[1], self.players[3])
         self.dealer = 0
+        self.trump = Suit.spades
+        self.flipped_card = None
 
     def black_jack(self):
         count = 0
@@ -22,13 +22,19 @@ class Game:
                 return count % 4
             count += 1
 
+    def select_trump(self):
+        pass
+
     def deal(self):
+        index = 0
         self.shuffle.shuffle_deck()
         deck = self.shuffle.get_deck()
-        self.player_one.set_cards(deck[0:5])
-        self.player_two.set_cards(deck[5:10])
-        self.player_three.set_cards(deck[10:15])
-        self.player_four.set_cards(deck[15:20])
+        for player in self.players:
+            player.set_cards(deck[index:(index+5)])
+            index += 5
+
+        for man in self.players:
+            print(man.get_cards())
 
     def start_game(self):
         self.shuffle.shuffle_deck()
