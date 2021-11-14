@@ -58,3 +58,7 @@ class TestShuffle(unittest.TestCase):
                 contains = True
                 break
         self.assertTrue(contains)
+
+
+if __name__ == '__main__':
+    unittest.main()

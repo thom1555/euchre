@@ -41,3 +41,7 @@ class TestSuit(unittest.TestCase):
         self.assertEqual(c.to_string(), 'clubs')
         c.become_trump()
         self.assertEqual(c.to_string(), 'spades')
+
+
+if __name__ == '__main__':
+    unittest.main()

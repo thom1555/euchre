@@ -47,3 +47,5 @@ class TestSuit(unittest.TestCase):
         self.assertEqual(p1.get_tricks(), 0)
 
 
+if __name__ == '__main__':
+    unittest.main()

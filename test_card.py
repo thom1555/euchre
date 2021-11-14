@@ -49,3 +49,7 @@ class TestCard(unittest.TestCase):
 
         self.assertTrue(clubs.is_black_jack())
         self.assertTrue(spades.is_black_jack())
+
+
+if __name__ == '__main__':
+    unittest.main()
