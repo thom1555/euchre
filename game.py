@@ -33,13 +33,15 @@ class Game:
             player.set_cards(deck[index:(index+5)])
             index += 5
 
-        for man in self.players:
-            print(man.get_cards())
-
     def start_game(self):
         self.shuffle.shuffle_deck()
         self.dealer = self.black_jack()
         self.deal()
+        self.display_cards()
+
+    def display_cards(self):
+        for player in self.players:
+            print(player.get_cards())
 
 
 def main():
