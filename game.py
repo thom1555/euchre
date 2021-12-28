@@ -41,6 +41,7 @@ class Game:
 
     def display_cards(self):
         for player in self.players:
+            print(player.get_name())
             print(player.get_cards())
 
 
