@@ -28,8 +28,21 @@ class Player:
     def get_called_trump(self):
         return self.called_trump
 
+    def get_legal_moves(self, lead):
+        can_play = []
+        for card in self.cards:
+            if card.get_suit() == lead:
+                can_play.append(card)
+        if len(can_play) == 0:
+            can_play = self.cards
+
+        return can_play
+
     def set_cards(self, cards):
         self.cards = cards
+
+    def set_called_trump(self):
+        self.called_trump = True
 
     def display_cards(self):
         for card in self.cards:
@@ -41,8 +54,8 @@ class Player:
     def add_euchre(self):
         self.times_euchred += 1
 
-    def set_called_trump(self):
-        self.called_trump = True
+    def play_card(self, to_play):
+        self.cards.remove(to_play)
 
     def reset(self):
         self.called_trump = False
