@@ -20,8 +20,8 @@ class Shuffle:
                 card = Card(value, suit)
                 self.deck.append(card)
 
-    def shuffle_deck(self):
-        random.shuffle(self.deck)
+    def shuffle_deck(self):  # pragma: no cover
+        random.shuffle(self.deck)  # Library implementation
 
     def get_deck(self):
         return self.deck
