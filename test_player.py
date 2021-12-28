@@ -5,7 +5,7 @@ from player import Player
 from suit import Suit
 
 
-class TestSuit(unittest.TestCase):
+class TestPlayer(unittest.TestCase):
 
     def test_player_name(self):
         p1 = Player('Johny')

@@ -15,7 +15,7 @@ def is_card(played):
     return to_return
 
 
-class MyTestCase(unittest.TestCase):
+class TestRandomAi(unittest.TestCase):
 
     def test_no_cards_exception(self):
         r1 = RandomAi("Puff")

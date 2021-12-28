@@ -26,7 +26,7 @@ class Shuffle:
     def get_deck(self):
         return self.deck
 
-    def print_deck(self):
+    def print_deck(self):  # pragma: no cover
         for c in self.deck:
             print(c)
 

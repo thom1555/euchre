@@ -15,10 +15,10 @@ class RandomAi(Player):
         return options[index]
 
 
-def main():
+def main():  # pragma: no cover
     ai = RandomAi('James')
     print(ai.get_name())
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

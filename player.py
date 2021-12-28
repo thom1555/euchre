@@ -44,7 +44,7 @@ class Player:
     def set_called_trump(self):
         self.called_trump = True
 
-    def display_cards(self):
+    def display_cards(self):  # pragma: no cover
         for card in self.cards:
             print(card)
 
