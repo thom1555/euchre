@@ -18,7 +18,7 @@ class Team:
         self.points += num
         # check for win
 
-    def display_team(self):
+    def display_team(self):  # pragma: no cover
         print("Team: " + self.get_team_name() + "!")
 
 
