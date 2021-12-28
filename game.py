@@ -45,10 +45,10 @@ class Game:
             print(player.get_cards())
 
 
-def main():
+def main():  # pragma: no cover
     new_game = Game('Puff', 'Snake', 'Voldie', 'Binx', 'Ballers', 'Scrubs')
     new_game.start_game()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

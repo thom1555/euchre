@@ -22,12 +22,12 @@ class Team:
         print("Team: " + self.get_team_name() + "!")
 
 
-def main():
+def main():  # pragma: no cover
     p1 = Player('Billy')
     p2 = Player('Timmy')
     my_team = Team('Scrubs', p1, p2)
     my_team.display_team()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

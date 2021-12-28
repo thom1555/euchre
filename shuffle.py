@@ -31,11 +31,11 @@ class Shuffle:
             print(c)
 
 
-def main():
+def main():  # pragma: no cover
     s = Shuffle()
     s.create_deck()
     s.print_deck()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

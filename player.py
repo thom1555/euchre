@@ -63,7 +63,7 @@ class Player:
         self.tricks = 0
 
 
-def main():
+def main():  # pragma: no cover
     p = Player('Rick')
     cards = [Card('jack', 'hearts'), Card('jack', 'diamonds'), Card('ace', 'hearts'), Card('king', 'hearts'),
              Card('queen', 'hearts')]
@@ -73,5 +73,5 @@ def main():
     p.display_cards()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

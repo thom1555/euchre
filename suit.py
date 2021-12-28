@@ -15,10 +15,10 @@ class Suit:
         else:
             self.name = "INVALID"
 
-    def __str__(self):
+    def __str__(self):  # pragma: no cover
         return self.to_string()
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return self.to_string()
 
     def to_string(self):
@@ -40,7 +40,7 @@ class Suit:
             self.name = self.black[self.black.index(self.name) - 1]
 
 
-def main():
+def main():  # pragma: no cover
     s = Suit('hearts')
     print(s)
     print('After change')
@@ -48,5 +48,5 @@ def main():
     print(s)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

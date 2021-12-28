@@ -11,10 +11,10 @@ class Card:
         self.suit = Suit(suit)
         self.value = value
 
-    def __str__(self):
+    def __str__(self):  # pragma: no cover
         return self.to_string()
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return self.to_string()
 
     def to_string(self):
@@ -43,11 +43,11 @@ class Card:
         return False
 
 
-def main():
+def main():  # pragma: no cover
     my_card = Card('jack', 'hearts')
     print(my_card.get_value())
     print(my_card.get_color())
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
