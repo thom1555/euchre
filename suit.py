@@ -13,7 +13,7 @@ class Suit:
         if name in self.red or name in self.black:
             self.name = name
         else:
-            self.name = "INVALID"
+            raise Exception('Card is invalid!')
 
     def __str__(self):  # pragma: no cover
         return self.to_string()
@@ -27,10 +27,7 @@ class Suit:
     def get_color(self):
         if self.name in self.red:
             return 'red'
-        elif self.name in self.black:
-            return 'black'
-
-        return "INVALID"
+        return 'black'
 
     def become_trump(self):
         # Called on the left to correct info

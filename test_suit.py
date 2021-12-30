@@ -10,12 +10,16 @@ class TestSuit(unittest.TestCase):
         c = Suit('clubs')
         d = Suit('diamonds')
         s = Suit('spades')
-        x = Suit('bad info :()')
+
         self.assertEqual(h.get_color(), 'red')
         self.assertEqual(c.get_color(), 'black')
         self.assertEqual(d.get_color(), 'red')
         self.assertEqual(s.get_color(), 'black')
-        self.assertEqual(x.get_color(), 'INVALID')
+
+    def test_invalid_suit(self):
+        with self.assertRaises(Exception) as context:
+            x = Suit('bad info :()')
+        self.assertTrue('Card is invalid!' in str(context.exception))
 
     def test_suit_change(self):
         # Hearts to diamonds
