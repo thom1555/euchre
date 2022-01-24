@@ -26,8 +26,8 @@ class Suit:
 
     def get_color(self):
         if self.name in self.red:
-            return 'red'
-        return 'black'
+            return 'RED'
+        return 'BLACK'
 
     def become_trump(self):
         # Called on the left to correct info

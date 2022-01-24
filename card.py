@@ -1,15 +1,15 @@
 from suit import Suit
+from card_value import CardValue
 
 
 class Card:
     """
     Provide value information and other aspects of a card
     """
-    values = {'9': 9, '10': 10, 'jack': 11, 'queen': 12, 'king': 13, 'ace': 14, 'left': 15, 'right': 16}
 
-    def __init__(self, value, suit):
+    def __init__(self, point_value, suit):
         self.suit = Suit(suit)
-        self.value = value
+        self.point_value = CardValue[point_value]
 
     def __str__(self):  # pragma: no cover
         return self.to_string()
@@ -18,11 +18,11 @@ class Card:
         return self.to_string()
 
     def to_string(self):
-        ret_str = str(self.value) + " of " + str(self.suit)
+        ret_str = str(self.point_value) + " of " + str(self.suit)
         return ret_str
 
-    def get_value(self):
-        return self.values[self.value]
+    def get_point_value(self):
+        return self.point_value.value
 
     def get_color(self):
         return self.suit.get_color()
@@ -31,21 +31,21 @@ class Card:
         return self.suit.to_string()
 
     def set_left(self):
-        self.value = 'left'
+        self.point_value = 'LEFT'
         self.suit.become_trump()
 
     def set_right(self):
-        self.value = 'right'
+        self.point_value = 'RIGHT'
 
     def is_black_jack(self):
-        if self.value == 'jack' and self.suit.get_color() == 'black':
+        if self.point_value == 'JACK' and self.suit.get_color() == 'BLACK':
             return True
         return False
 
 
 def main():  # pragma: no cover
-    my_card = Card('jack', 'hearts')
-    print(my_card.get_value())
+    my_card = Card('JACK', 'hearts')
+    print(my_card.get_point_value())
     print(my_card.get_color())
 
 

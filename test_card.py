@@ -6,10 +6,10 @@ from card import Card
 class TestCard(unittest.TestCase):
 
     def test_card(self):
-        card = Card('jack', 'hearts')
-        self.assertEqual(card.get_color(), 'red')
+        card = Card('JACK', 'hearts')
+        self.assertEqual(card.get_color(), 'RED')
         self.assertEqual(card.get_suit(), 'hearts')
-        self.assertEqual(card.get_value(), 11)
+        self.assertEqual(card.get_point_value(), 11)
 
     def test_card_2(self):
         card = Card('10', 'spades')
